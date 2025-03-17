@@ -55,6 +55,8 @@ a
 
 .u-section{
     margin: 0;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
 }
 
 .u-container{
@@ -73,6 +75,8 @@ a
     justify-content: center;
     align-items: center;
     background-color: black;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
 }
 
 .nav{
@@ -120,5 +124,11 @@ a
     right: 0;
     width: 50%;
     height: 100%;
-    background: url('images/brad.jpeg') cover no-repeat;
+    background: url('images/brad.jpeg') center/cover no-repeat;
+}
+
+.selected_work{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

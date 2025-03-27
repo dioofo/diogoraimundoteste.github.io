@@ -7,6 +7,7 @@ body
     margin: 0;
     background-color: black;
     color: white;
+    cursor: url(images/circle-cursor.png);
 }
 
 /* Utility Classes */
@@ -38,6 +39,7 @@ h3
 h4
 {
     font-size: 2.5rem; /*40px*/
+    font-weight: 500;
     padding: 0;
     margin: 0;
     line-height: 1.25em;
@@ -347,3 +349,60 @@ a:hover
 }
 
 /* ARCHIVE */
+
+.archive_container{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 100%;
+    padding-bottom: 0;
+}
+
+/*.projects_grid_container{
+    display: flex;
+    padding: 2.5rem 0;
+    gap: 2rem;
+}
+
+.project_item img{
+    height: rem;
+}*/
+
+.archive_slider{
+    width: 100%;
+    height: var(--height);
+    position: relative;
+    overflow: hidden;
+}
+
+.archive_list{
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+}
+
+.archive_item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 30s linear infinite;
+    animation-delay: calc( (30s/var(--quantity)) * (var(--position) - 1) );
+}
+
+.archive_slider .archive_list .archive_item img{
+    height: 20rem;
+}
+
+@keyframes autoRun {
+    from{
+        left: 100%;
+    } to{
+        left: calc(var(--width) * -2);
+    }
+}
+
+.archive_slider:hover .archive_item{
+    animation-play-state: paused !important;
+}

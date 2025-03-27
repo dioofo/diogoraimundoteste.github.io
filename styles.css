@@ -7,7 +7,22 @@ body
     margin: 0;
     background-color: black;
     color: white;
-    cursor: url(images/circle-cursor.png);
+}
+
+/* Cursor */
+
+.cursor{
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background-color: white;
+    margin-left: -22px;
+    margin-top: -22px;
+    z-index: 999;
+    backdrop-filter: grayscale(1);
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
 }
 
 /* Utility Classes */
@@ -74,6 +89,10 @@ a
 a:hover
 {
     text-decoration: underline;
+}
+
+a:hover ~ .cursor{
+    transform: scale(1.5);
 }
 
 .u-section{
@@ -148,7 +167,7 @@ a:hover
 
 .hero_img{
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     top: 0;
     right: 0;
     width: 50%;

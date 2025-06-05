@@ -1,3 +1,5 @@
+
+//CUSTOM CURSOR
 window.addEventListener("mousemove", (e)=>{
 
     const cursorDot = document.getElementById("data-cursor-dot");
@@ -39,10 +41,49 @@ window.addEventListener("mousemove", (e)=>{
 
 });
 
-$(window).on('load',function(){
-    $(".loader-wrapper").fadeOut("slow");
-    $("body").removeClass("preload"); 
+// LOADER ANIMATION
+const loader = document.querySelector('.loader');
+
+// Save scroll position
+const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+loader.addEventListener('animationend', () => {
+  // Hide loader
+  loader.style.display = 'none';
+
+  // Remove scroll lock
+  document.body.classList.remove('lock-scroll');
+
+  // Restore scroll position (optional)
+  window.scrollTo(0, scrollY);
 });
 
+// LOCOMOTIVE SCROLL - SMOOTH SCROLL
+let scrollAmount = window.scrollY || 0;
+let targetScroll = scrollAmount;
+let isScrolling = false;
 
+window.addEventListener('wheel', function(event) {
+  event.preventDefault();  // Evita scroll padrão
+  targetScroll += event.deltaY;
+  
+  // Limita o scroll ao tamanho da página
+  targetScroll = Math.max(0, Math.min(targetScroll, document.body.scrollHeight - window.innerHeight));
+  
+  if (!isScrolling) {
+    isScrolling = true;
+    requestAnimationFrame(smoothScroll);
+  }
+}, { passive: false });
 
+function smoothScroll() {
+  scrollAmount += (targetScroll - scrollAmount) * 0.08; // acelera a interpolação
+
+  window.scrollTo(0, scrollAmount);
+
+  if (Math.abs(scrollAmount - targetScroll) > 0.5) {
+    requestAnimationFrame(smoothScroll);
+  } else {
+    isScrolling = false;
+  }
+}

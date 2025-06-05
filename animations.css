@@ -51,6 +51,20 @@
     }
 }
 
+.loader_anim {
+    animation: loaderFadeOut 1s ease;
+    animation-delay: 1s;
+}
+      
+@keyframes loaderFadeOut {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
 @media (max-width: 800px){
     .autoShowX{
         animation-timeline: view(5% 5%);

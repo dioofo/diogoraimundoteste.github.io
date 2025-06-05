@@ -469,80 +469,6 @@ section{
     filter: grayscale(100%);
 }
 
-/* Footer section */
-
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6rem;
-    padding: 7.5rem 0 0 0;
-    background-color: black;
-    width: 100%;
-}
-
-footer a{
-    color: white;
-}
-
-.footer_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    gap: 2.5rem;
-    padding: 0 0 2rem 0;
-}
-
-.footer_container > .wrap{
-    
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    border-bottom: solid 0.06rem gray;
-    padding-bottom: 2.5rem;
-    overflow: hidden;
-}
-
-.footer_container .wrap a{
-    text-decoration: 0;
-}
-
-.footer_container h2{
-    font-family: Helvetica, sans-serif;
-    color: gray;
-    font-size: 12rem;
-    font-weight: 100;
-    transition: all 0.5s ease;
-    text-align: center;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.footer_container h2:hover{
-    color: white;
-}
-
-.footer_links{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.footer_links ul{
-    list-style: none;
-    display: flex;
-    gap: 2.5rem;
-    padding: 0;
-}
-
-svg{
-    margin-left: 0.3rem;
-}
-
 /* ----- ARCHIVE ----- */
 
 .archive_section{
@@ -681,6 +607,79 @@ svg{
     object-fit: cover;
 }
 
+/* Footer section */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    padding: 7.5rem 0 0 0;
+    background-color: black;
+    width: 100%;
+}
+
+footer a{
+    color: white;
+}
+
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2.5rem;
+    padding: 0 0 2rem 0;
+}
+
+.footer_container > .wrap{
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    border-bottom: solid 0.06rem gray;
+    padding-bottom: 2.5rem;
+    overflow: hidden;
+}
+
+.footer_container .wrap a{
+    text-decoration: 0;
+}
+
+.footer_container h2{
+    font-family: Helvetica, sans-serif;
+    color: gray;
+    font-size: 12rem;
+    font-weight: 100;
+    transition: all 0.5s ease;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer_container h2:hover{
+    color: white;
+}
+
+.footer_links{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer_links ul{
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    padding: 0;
+}
+
+svg{
+    margin-left: 0.3rem;
+}
 
 @media (max-width: 800px){
 

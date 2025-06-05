@@ -113,6 +113,7 @@ h5{
     line-height: 1.5em;
     letter-spacing: -0.03em;
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 p
@@ -139,7 +140,6 @@ p
     margin: 0;
     letter-spacing: 0.02em;
     color: gray;
-    text-transform: uppercase;
 }
 
 a
@@ -579,10 +579,12 @@ section{
     top: 0;
     left: 0;
     z-index: -3;
+    width: 100%;
 }
 
 #project_hero_section .hero_container{
     height: 100vh;
+    width: 100%;
 }
 
 #project_hero_section .hero_container video{
@@ -612,10 +614,17 @@ section{
 .project_gallery{
     list-style: none;
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .project_gallery li{
     width: 100%;
+    background-color: none;
+    box-shadow: 0px 0px 220px rgba(255, 255, 255, 0.03);
+
+
 }
 
 .project_gallery li img{
@@ -818,6 +827,7 @@ h5{
 .button_wrap{
     width: 100%;
 }
+
 /*media navbar*/
 
 .navbar ul {
@@ -894,6 +904,14 @@ h5{
     
     /*media archives*/
 
+    .archives_container{
+        width: 100%;
+    }
+
+    .project_archives{
+        width: 100%;
+    }
+    
     .project_archives li .wrap{
         width: 100%;
     }
@@ -936,6 +954,9 @@ h5{
 
     .project_gallery_section main{
         width: 92%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
      }
      
     #project_hero_section{
@@ -945,6 +966,11 @@ h5{
 
      .project_gallery_section{
         padding: 0;
+    }
+
+    .project_gallery{
+        width: 98%;
+        gap: 1rem;
     }
 }
 

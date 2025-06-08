@@ -757,6 +757,11 @@ svg{
 
 @media (max-width: 800px){
 
+
+body{
+    cursor: none;
+}
+
 h1{
     font-size: 6.25rem;
 }

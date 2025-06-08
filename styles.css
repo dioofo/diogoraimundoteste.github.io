@@ -755,6 +755,16 @@ svg{
     margin-left: 0.3rem;
 }
 
+@media (hover:none), (pointer: coarse){
+    .cursor-dot{
+        display: none !important;
+    }
+
+    .cursor-outline{
+        display: none !important;
+    }
+}
+
 @media (max-width: 800px){
 
 

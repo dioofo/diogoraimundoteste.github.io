@@ -1,8 +1,27 @@
+
+/*Diogo Pinto Raimundo (3220550)
+
+Data
+08 junho 2025 
+
+Nome do Exercício
+- Portfolio
+
+Época de Avaliação (escolher uma abaixo e apagar as restantes)
+- Continua (durante as aulas)
+
+Ano Letivo (3º, 2024-2025), 
+Semestre (2º), 
+Unidade Curricular (Laboratório de Projeto II), 
+Curso (DGM), 
+Escola (ESAD.CR), 
+Docente (Marco Heleno).*/
+
 // CUSTOM CURSOR
 // Este evento é ativado sempre que o utilizador move o rato.
 window.addEventListener("mousemove", (e) => {
 
-  // Vai buscar os dois elementos do cursor personalizado.
+  // Vai buscar os dois elementos do cursor (pequeno e grande) personalizado.
   const cursorDot = document.getElementById("data-cursor-dot");
   const cursorOutline = document.getElementById("data-cursor-outline");
 
@@ -16,7 +35,7 @@ window.addEventListener("mousemove", (e) => {
       cursorDot.style.top = `${posY}px`;
   }, 0);
 
-  // Atualiza a posição da “aura” do cursor com um pequeno atraso (efeito trailing).
+  // Atualiza a posição do cursor grande com um pequeno atraso (efeito trailing).
   setTimeout(() => {
       cursorOutline.style.left = `${posX}px`;
       cursorOutline.style.top = `${posY}px`;
@@ -26,21 +45,21 @@ window.addEventListener("mousemove", (e) => {
   document.querySelectorAll("a").forEach(link => {
       // Quando o rato entra num link
       link.addEventListener("mouseenter", () => {
-          // Volta a ir buscar os elementos (podia estar fora para otimizar, mas funciona).
+          // Volta a ir buscar os elementos
           const cursorDot = document.getElementById("data-cursor-dot");
           const cursorOutline = document.getElementById("data-cursor-outline");
 
-          // Aumenta o tamanho do ponto e altera o modo de mistura para dar contraste.
+          // Aumenta o cursor pequeno e altera o blending mode para difference.
           cursorDot.style.transform = "translate(-50%, -50%) scale(20)";
           cursorDot.style.mixBlendMode = "difference";
 
-          // Também aumenta a aura.
+          // Também aumenta o tamanho do cursor grande.
           cursorOutline.style.transform = "translate(-50%, -50%) scale(2)";
       });
 
       // Quando o rato sai do link
       link.addEventListener("mouseleave", () => {
-          // Restaura o tamanho e mistura ao normal.
+          // Restaura e volta ao estado default dos cursors
           cursorDot.style.transform = "translate(-50%, -50%) scale(1)";
           cursorDot.style.mixBlendMode = "normal";
           cursorOutline.style.transform = "translate(-50%, -50%) scale(1)";
@@ -50,10 +69,10 @@ window.addEventListener("mousemove", (e) => {
 });
 
 // LOADER ANIMATION
-// Vai buscar o elemento do loader (aquele ecrã que aparece antes do conteúdo carregar).
+// Vai buscar o elemento do loader
 const loader = document.querySelector('.loader');
 
-// Guarda a posição atual do scroll antes de ocultar o loader (caso seja necessário restaurar depois).
+// Guarda a posição atual do scroll antes de ocultar o loader
 const scrollY = window.scrollY || document.documentElement.scrollTop;
 
 // Quando a animação do loader termina...
@@ -61,10 +80,10 @@ loader.addEventListener('animationend', () => {
   // Esconde o loader para mostrar o resto do site.
   loader.style.display = 'none';
 
-  // Remove a classe que impede o scroll (útil se foi bloqueado durante o carregamento).
+  // Remove a classe que impede o scroll
   document.body.classList.remove('lock-scroll');
 
-  // Restaura a posição do scroll, caso tenha sido alterada (opcional mas útil).
+  // Restaura a posição do scroll, caso tenha sido alterada
   window.scrollTo(0, scrollY);
 });
 

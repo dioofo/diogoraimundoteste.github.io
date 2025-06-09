@@ -101,15 +101,15 @@ Docente (Marco Heleno).*/
     }
 }
 
-@media (max-width: 800px){
+@media screen and (max-width: 800px){
     .autoShowX{
-        animation-timeline: view(5% 5%);
+        animation-timeline: none;
     }
 
     @keyframes x-appear{
         from{
             opacity: 0;
-            transform: translateX(50px);
+            transform: translateX(0);
         }
     
         to{

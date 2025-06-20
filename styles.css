@@ -467,7 +467,7 @@ section{
 }
 
 .selected_work_container .item .img_container{
-    height: 44rem;
+    height: 40rem;
     width: 100%;
     overflow: hidden;
 }
@@ -557,9 +557,11 @@ section{
     z-index: 1;
 }
 
-.project_archives li .wrap{
+
+.project_archives li span{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
     gap: 1rem;
     z-index: 1;
